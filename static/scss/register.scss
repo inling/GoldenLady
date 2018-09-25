@@ -1,0 +1,94 @@
+body{
+  background: white;
+  margin: 0;
+  padding: 0;
+}
+.login-bg {
+  position:relative;
+  width: 100%;
+  height:700px;
+  margin-top:100px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../img/login/2bc0f1c96187e6053da0ad1c3e9bcfd8-209402.jpg);
+  .login-modal{
+    width: 100%;
+    height:100%;
+    background:rgba(0,0,0,0.5);
+  }
+  .login-block{
+    position:absolute;
+    z-index: 2;
+    top:50px;
+    right:180px;
+    width:500px;
+    height:600px;
+    background:rgba(255,255,255,0.8);
+    box-shadow:0 0 20px 0 #aaa;
+    border-radius: 10px;
+    .login-title{
+      font-size:30px;
+      color:#348BCC;
+      margin-left:30px;
+    }
+    .login-block-1,.login-block-2,.login-block-3,.login-block-4,.login-block-5{
+      position:relative;
+      p{
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        left:115px;
+        top:50px;
+      }
+      img{
+        position: absolute;
+        width:35px;
+        top:5px;
+        left:50px;
+      }
+      #uname,#upwd,#cpwd,#phone,#email{
+        margin-left:30px;
+        width:320px;
+        height:40px;
+        font-size:20px;
+        padding-left:80px;
+        background: white;
+      }
+    }
+    .login-block-1{
+        margin-top:20px;
+    }
+    .login-block-2{
+      margin-top:40px;
+    }
+    .login-block-3{
+      margin-top:40px;
+    }
+    .login-block-4{
+      margin-top:40px;
+    }
+    .login-block-5{
+      margin-top:40px;
+    }
+
+    .login-button{
+      text-align: center;
+      button{
+        width: 300px;
+        height:50px;
+        margin-top: 35px;
+        margin-left: -20px;
+        background:#348BCC;
+        color:white;
+        font-size:20px;
+        border:0;
+
+      }
+    }
+  }
+}
+canvas{
+  position:fixed;
+  top:0;
+  left:0;
+}

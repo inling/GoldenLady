@@ -1,0 +1,77 @@
+$ld_golden:#E6C985;
+#layout-footer {
+  
+    .footer-map {
+      float: left;
+      max-width: 990px;
+      width: 60%;
+      height: 750px;
+      border-right: 1px solid #B4B3B1;
+      padding-right: 50px;
+      img {
+        width: 100%;
+      }
+    }
+    .footer-storeInfo{
+      float:left;
+      width:40%;
+      padding-left:50px;
+    }
+    .desc-a{
+      font-size:50px;
+      margin:40px 0 20px;;
+      color:white;
+    }
+    .desc-b{
+      font-size:35px;
+      margin-bottom:40px;
+      color:#B4B3B1
+    }
+    .desc-wb img{
+      margin:20px 20px 20px 0;
+    }
+    .footer-stores-a,.footer-stores-b{
+      font-size:14px;
+      color:white;
+    }
+    .footer-stores-a span{
+      color:$ld_golden;
+    }
+    .footer-stores-b span{
+      color:$ld_golden;
+    }
+    .footer-stores-b p{
+      padding:1px;
+    }
+    .footer-stores-a{
+      margin:40px 0 20px;
+      color:white;
+    }
+    .footer-tel{
+      margin:20px 40px 20px;
+      color:white;
+    }
+    .copyright{
+      clear:left;
+      text-align:center;
+      font-size:14px;
+      color:#999;
+      padding:60px 0 100px;
+    }
+    .copyright a{
+      color:#999;
+    }
+    .home-park-34{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding:50px 100px;
+      background: #EFEFEF;
+    }
+    .home-park-35{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding:50px 100px 150px;
+    }
+  }

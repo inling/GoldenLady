@@ -1,0 +1,166 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-weight: 400;
+  color: #333;
+  font-family: "Microsoft Yahei", "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", Helvetica, Arial, sans-serif;
+  background: #f9f9f9; }
+
+a {
+  text-decoration: none; }
+
+#layout-header .top-bar {
+  width: 1200px;
+  height: 36px;
+  margin: 0 auto;
+  background: #f5f5f5;
+  text-align: right;
+  font-size: 13px; }
+
+#layout-header span {
+  position: relative;
+  display: inline-block;
+  height: 22px;
+  line-height: 22px;
+  margin-top: 7px; }
+
+#layout-header a {
+  text-decoration: none;
+  color: #333; }
+
+#layout-header img {
+  vertical-align: middle;
+  margin-top: -2px; }
+
+#layout-header #top-menu {
+  font-size: 12px;
+  color: #d5bf8d;
+  font-weight: bold;
+  letter-spacing: 2px;
+  position: relative;
+  width: 70px;
+  display: block;
+  text-align: center;
+  height: 29px; }
+
+#layout-header .top-sign {
+  padding-left: 22px;
+  padding-right: 26px; }
+
+#layout-header .top-wechat {
+  margin-left: 22px;
+  padding-right: 26px; }
+
+#layout-header .top-weibo {
+  margin-left: 22px;
+  padding-right: 26px; }
+
+#layout-header .top-know {
+  margin-left: 22px;
+  padding-right: 26px; }
+
+#layout-header .top-complain {
+  margin-left: 22px; }
+
+#layout-header .top-menu {
+  margin-left: 20px; }
+
+#layout-header #top-menu {
+  border: 1px solid transparent; }
+
+#layout-header .top-menu:hover #top-menu {
+  border: 1px solid #d5bf8d;
+  border-bottom: 0px;
+  background: #fff; }
+
+#layout-header .top-menu:hover #top-menu-content {
+  display: block;
+  margin-left: 20px; }
+
+#layout-header b {
+  position: absolute;
+  width: 3px;
+  height: 22px;
+  background: url("../img/header/vertical.png") no-repeat center center;
+  background-size: contain;
+  right: 0;
+  top: 0;
+  z-index: 5; }
+
+#layout-header #top-menu-content {
+  display: none;
+  position: absolute;
+  border: 1px solid #d5bf8d;
+  background: #fff;
+  width: 70px;
+  height: auto;
+  right: 0;
+  margin: 0;
+  border-top: 0; }
+
+#layout-header #top-menu-content a {
+  display: block;
+  text-align: center; }
+
+#layout-header .top-logo {
+  height: 90px;
+  padding-top: 40px;
+  background: #fff;
+  text-align: center; }
+
+#layout-header .top-nav {
+  background: #fff;
+  border-bottom: 1px solid #ababab;
+  color: #121212; }
+  #layout-header .top-nav ul {
+    list-style-type: none;
+    text-align: center; }
+  #layout-header .top-nav li {
+    display: inline-block;
+    height: 75px;
+    margin-right: 40px; }
+    #layout-header .top-nav li a {
+      display: inline-block;
+      height: 76px;
+      padding: 3px 8px 0; }
+    #layout-header .top-nav li p {
+      font-size: 19px;
+      padding-top: 20px;
+      height: 42px; }
+    #layout-header .top-nav li span {
+      position: relative;
+      margin-top: 0;
+      font-size: 11px;
+      color: #5d5d5d;
+      height: 15px;
+      line-height: 15px; }
+  #layout-header .top-nav .nli-active a {
+    border-bottom: 4px #d5bf8d solid; }
+  #layout-header .top-nav .nli-location {
+    position: relative; }
+    #layout-header .top-nav .nli-location:hover .location-fix {
+      display: flex; }
+  #layout-header .top-nav ul ul {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 904px;
+    height: auto;
+    padding: 25px 12px 10px;
+    box-shadow: 0 0 20px 0 #aaa;
+    display: none; }
+    #layout-header .top-nav ul ul li {
+      width: 280px;
+      height: 128px;
+      margin: 0 0 14px 0; }
+    #layout-header .top-nav ul ul a {
+      margin: 0;
+      padding: 0; }
+  #layout-header .top-nav img {
+    width: 280px;
+    height: 128px; }

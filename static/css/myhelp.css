@@ -1,0 +1,8 @@
+.myClear:after {
+  content: "";
+  display: block;
+  clear: both; }
+
+.myMargin:before {
+  content: "";
+  display: table; }

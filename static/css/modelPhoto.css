@@ -1,0 +1,52 @@
+#home .home-slider {
+  position: relative;
+  width: 100%;
+  height: 640px;
+  margin-top: 50px;
+  z-index: -1;
+  overflow: hidden; }
+  #home .home-slider .blockImg {
+    position: absolute;
+    width: 100%;
+    transition: all 1s linear;
+    overflow: hidden;
+    opacity: 1; }
+  #home .home-slider .lineImg {
+    width: 0;
+    opacity: 0; }
+
+#home .home-nav {
+  margin: 50px 0;
+  overflow: hidden; }
+  #home .home-nav div {
+    width: 1500px;
+    height: 40px;
+    background: #EFEFEF;
+    margin-top: 10px; }
+    #home .home-nav div ul {
+      list-style: none; }
+      #home .home-nav div ul li {
+        display: inline-block;
+        width: 150px;
+        line-height: 40px; }
+        #home .home-nav div ul li:nth-child(2) {
+          width: 50px; }
+
+#home .home-sample {
+  display: flex;
+  justify-content: center;
+  margin: 50px; }
+
+#home #home-waterFull {
+  position: relative;
+  width: 100%;
+  z-index: -1; }
+  #home #home-waterFull .box {
+    float: left;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #ccc;
+    width: 25%; }
+    #home #home-waterFull .box .pic img {
+      width: 100%;
+      height: auto; }

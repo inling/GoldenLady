@@ -1,0 +1,96 @@
+#home{
+    .home-big-img{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        img{
+            width:100%;
+            height:100%;
+        } 
+    }
+    .home-video{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    #homeBase_d{
+        .home-park{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            img{
+                width:100%;
+                height:100%;
+            }
+        }
+    }
+    .home-park-28{
+        text-align: center
+    }
+    .home-park-29{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding:100px;
+    }
+    .home-park-30{
+        ul{
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 100px;
+            li{
+                width:50%;
+                padding:5px 5px 30px 5px;
+                img{
+                    width: 100%;
+                    margin-bottom:10px;
+                }
+            }         
+        }
+    }
+    .home-park-31{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding:100px;
+    }
+    .home-park-32{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding:0 100px;
+        width: 100%;
+        ul{
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding:0 100px;
+            li{
+                margin:10px;
+                a{
+                    text-decoration: none;
+                    color: white;
+                    font-weight: bold;
+                    display: inline-block;
+                    background: #aaa;
+                    border-radius:10px;
+                    width:184px;
+                    height:93px;
+                    text-align: center;
+                    line-height: 93px;
+                }
+            }
+        }
+    }
+
+    .home-park-33{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding:50px 100px;
+    }
+ 
+}

@@ -1,0 +1,80 @@
+#home .home-big-img {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+  #home .home-big-img img {
+    width: 100%;
+    height: 100%; }
+
+#home .home-video {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+
+#home #homeBase_d .home-park {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+  #home #homeBase_d .home-park img {
+    width: 100%;
+    height: 100%; }
+
+#home .home-park-28 {
+  text-align: center; }
+
+#home .home-park-29 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 100px; }
+
+#home .home-park-30 ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 100px; }
+  #home .home-park-30 ul li {
+    width: 50%;
+    padding: 5px 5px 30px 5px; }
+    #home .home-park-30 ul li img {
+      width: 100%;
+      margin-bottom: 10px; }
+
+#home .home-park-31 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 100px; }
+
+#home .home-park-32 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0 100px;
+  width: 100%; }
+  #home .home-park-32 ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 100px; }
+    #home .home-park-32 ul li {
+      margin: 10px; }
+      #home .home-park-32 ul li a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        display: inline-block;
+        background: #aaa;
+        border-radius: 10px;
+        width: 184px;
+        height: 93px;
+        text-align: center;
+        line-height: 93px; }
+
+#home .home-park-33 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 50px 100px; }

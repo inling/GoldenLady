@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>金夫人</title>
+		<link rel="stylesheet" href="css/myhelp.css">
+		<link rel="stylesheet" href="css/index.css">
+		<script type="text/javascript" src="javascript/nav_fixed.js"></script>
+		<script src="javascript/vue.js"></script>
+		<style>
+			.map-point{
+				position: absolute;
+				width:100%;
+				bottom:10px;
+				margin:0 auto;
+				z-index: 10;
+				text-align:center;
+			}
+			.map-point span{
+				width:25px;
+				height:8px;
+				border:1px solid;
+				background: white;
+				display: inline-block;
+				margin-right: 10px;
+
+			}
+			.map-active{
+				background:black !important;
+			}
+
+			.image-enter-active {
+				transform: translateX(0);
+				transition: all 1.5s ease;
+			  }
+			  .image-leave-active {
+				transform: translateX(-100%);
+				transition: all 1.5s ease;
+			  }
+			  .image-enter {
+				transform: translateX(100%);
+			  }
+			  .image-leave {
+				transform: translateX(0);
+			  }
+		</style>
+	</head>
+	<body>
+		<header id="layout-header"></header>
+		<div id="home">
+			<!--轮播图-->
+			<section class="home-slider-map">
+				<lunbo></lunbo>
+			</section>
+			<template id="tpllunbo">
+				<div class="slide" v-on:mouseover="stop()" v-on:mouseout="move()">
+					<div class="slideshow">
+						<ul>
+							<transition-group tag="ul" name="image">
+							
+							</transition>
+							<li v-for="(ele,i) in carousels" :key="i" v-show="i===mark">
+								<a href="">
+									<img :src="ele.src" alt="">
+								</a>
+							</li>
+							</transition-group>
+							
+						</ul>
+					</div>
+					<div class="map-point">
+						<span v-for="(ele,i) in carousels" :class="{'map-active':i===mark}" :key="i" @click="change(i)"></span>
+					</div>
+				</div>
+			</template>
+
+
+
+
+			<div class="icons1">
+				<img src="img/home/golden-ladies.png" alt="" />
+			</div>
+			<div class="home-base">
+				<div class="home-base-title">
+					<img src="img/home/location-2.png" alt=""/>
+				</div>
+				<div class="home-base-maintext">
+					<img src="img/home/location-3.png" alt=""/>
+				</div>
+				<ul class="home-base-img1">
+					<!--
+					<li>
+						<img src="img/home/440f342c26abe48c8da08dc83dc27479-245108.jpg" alt=""/>
+						<p class="text-title1">浪漫丨唯美丨幸福感</p>
+						<p class="text-title2">1000亩浩瀚梦幻花园影城，88种鲜花塑造华东超大4D智慧型花海 顾客喜爱度最高的网红基地</p>
+					</li>
+					<li>
+						<img src="img/home/4f43575b3758d2083936c8d230db1947-236875.jpg" alt=""/>
+						<p class="text-title1">欧式丨时尚丨轻奢</p>
+						<p class="text-title2">100000㎡欧式浪漫内外景一站式摄影基地 更适合亚洲人的欧式优雅风格</p>
+					</li>
+					-->
+				</ul>
+				<ul class="home-base-img2">
+					<!--
+					<li>
+						<img src="img/home/4b186e7b672984c62b416bc96a40c48a-159714.jpg" alt=""/>
+						<p class="text-title1">享自由丨乐自然丨青春</p>
+						<p class="text-title2">1000亩英伦文艺秘密花园， 七色花海/百亩茶园，朔造四季不同浪漫美景。</p>
+					</li>
+					<li>
+						<img src="img/home/e83febf60c0f42cccf5dd7b2b2ec74d5-125519.jpg" alt=""/>
+						<p class="text-title1">高定丨地中海丨异域风情</p>
+						<p class="text-title2">花1/10的钱，拍遍地中海8大美景 ，2000公里太湖，8大特色浪漫场景</p>
+					</li>
+					<li>
+						<img src="img/home/40131db49a211bbafb7ed81cae399f76-113442.jpg" alt=""/>
+						<p class="text-title1">童话丨梦幻丨少女系</p>
+						<p class="text-title2">95000㎡浪漫城堡，满足你的童话公主梦 90’S少女时代的梦幻乐园</p>
+					</li>
+					-->
+				</ul>
+			</div>
+			<div class="icons1">
+				<img src="img/home/golden-ladies.png" alt="" />
+			</div>
+			<div class="home-week">
+				<div class="home-week-title">
+					<img src="img/home/g-t.png" alt=""/>
+				</div>
+				<div class="home-week-maintext">
+					<img src="img/home/g-sub.png" alt=""/>
+				</div>
+				<ul>
+					<!--
+					<li>
+						<img src="img/home/726c16f7d658ff7bf3e10c5201351dd4-120059_x_347_540.jpg" alt=""/>
+						<p class="home-week-p1">2018 . 08 . 02</p>
+						<p class="home-week-p2">08月第01季客片 GoldenLadies</p>
+					</li>
+					<li>
+						<img src="img/home/8318a7f93dc95231d7edf2c48720ec54-63855_x_347_540.jpg" alt=""/>
+						<p class="home-week-p1">2018 . 07 . 26</p>
+						<p class="home-week-p2">07月第04季客片 GoldenLadies</p>
+					</li>
+					<li>
+						<img src="img/home/9676f235995fed6c77506c9395ff161f-102603_x_347_540.jpg" alt=""/>
+						<p class="home-week-p1">2018 . 07 . 21</p>
+						<p class="home-week-p2">07月第03季客片 GoldenLadies</p>
+					</li>
+					<li>
+						<img src="img/home/8441d7de83dc3145408b6e572cac2eb1-166991_x_347_540.jpg" alt=""/>
+						<p class="home-week-p1">2018 . 07 . 12</p>
+						<p class="home-week-p2">07月第02季客片 GoldenLadies</p>
+					</li>-->
+				</ul>
+					
+				<ul>
+					<!--
+					<li>
+						<img src="img/home/245d06dea9307ee48cd56c1d0513ae74-144779_x_347_540.jpg" alt=""/>
+						<p class="home-week-p1">2018 . 07 . 05</p>
+						<p class="home-week-p2">07月第01季客片 GoldenLadies</p>
+					</li>
+					<li>
+						<img src="img/home/8a93e0e9222dfd4a952607defdb60a86-175458_x_347_540.jpg" alt=""/>
+						<p class="home-week-p1">2018 . 06 . 28</p>
+						<p class="home-week-p2">06月第04季客片 GoldenLadies</p>
+					</li>
+					<li>
+						<img src="img/home/f5044b20a93b07b0eee2b2aab2a6691f-102697_x_347_540.jpg" alt=""/>
+						<p class="home-week-p1">2018 . 06 . 21</p>
+						<p class="home-week-p2">06月第03季客片 GoldenLadies</p>
+					</li>
+					<li>
+						<img src="img/home/93164255c031a3b6fbaca5a671dab0f2-143894_x_347_540.jpg" alt=""/>
+						<p class="home-week-p1">2018 . 06 . 14</p>
+						<p class="home-week-p2">06月第02季客片 GoldenLadies</p>
+					</li>
+					-->
+				</ul>
+			</div>
+			<div class="icons2">
+				<img src="img/home/v-1.png" alt=""/>
+			</div>
+			<div class="video-wrap">
+				<div class="video-wrap-big">
+					<video src="video/ce97b8981caa4af1248df81e990ef642-24131888.mp4" id="360videoname" class="video-none"></video>
+					<img src="img/home/big-v.png" video="video/ce97b8981caa4af1248df81e990ef642-24131888.mp4" alt="" id="buttonbig"/>
+				</div>
+				<div class="video-control">
+					<ul>
+						<li video="video/d601716174e10a7730efa286db529d19-25297001.mp4">
+							<img class="video-control-img1" src="img/home/2b9750949bfb5da372ec1e0c7a5962e1-166080_x_483_274.jpg" alt=""/>
+							<div>
+								<img src="img/home/s-v.png" alt=""/>
+							</div>
+						</li>
+						<li video="video/d601716174e10a7730efa286db529d19-25297001.mp4">
+							<img class="video-control-img1" src="img/home/4589585e7ef80960b89f09fc4634af57-74119_x_483_274.jpg" alt=""/>
+							<div>
+								<img src="img/home/s-v.png" alt=""/>
+							</div>
+						</li>
+						<li video="video/d601716174e10a7730efa286db529d19-25297001.mp4">
+							<img class="video-control-img1" src="img/home/fd9ad5ba794ade79bce2a24f7a9b3e3f-492258_x_483_274.jpg"  alt=""/>
+							<div>
+								<img src="img/home/s-v.png" alt=""/>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="icons1">
+				<img src="img/home/golden-ladies.png" alt="" />
+			</div>
+			<div class="home-price">
+				<img src="img/home/price-t.png" alt=""/>
+				<ul class="home-price-box">
+					<li class="home-price-box-li">
+						<p>·您的拍摄计划·</p>
+						<ul>
+							<li>不限套数</li>
+							<li>男女各7套</li>
+							<li>男女各6套</li>
+							<li>男女各5套</li>
+							<li>男女各4套</li>
+							<li>男女各3套</li>
+						</ul>
+					</li>
+					<li class="home-price-box-li">
+						<p>·您喜欢的风格·</p>
+						<ul>
+							<li>纪实风格</li>
+							<li>文艺风格</li>
+							<li>旅拍风格</li>
+							<li>轻欧风格</li>
+							<li>韩式风格</li>
+							<li>中式风格</li>
+						</ul>
+					</li>
+					<li class="home-price-box-li">
+						<p>·期望拍摄场景·</p>
+						<ul>
+							<li>东方爱情湖</li>
+							<li>悦影庄梦幻影城</li>
+							<li>路易威仕环球影城</li>
+							<li>北纬30°法曼云镜</li>
+							<li>拾梦童话·爱乐城</li>
+							<li>星光婚礼品牌馆</li>
+						</ul>
+					</li>
+					<li class="home-price-box-li">
+						<p>·您的预算·</p>
+						<ul>
+							<li>15999-39999</li>
+							<li>10000-15999</li>
+							<li>7000-10000</li>
+							<li>4000-7000</li>
+							<li>1000-3999</li>
+						</ul>
+					</li>
+					<li class="home-price-box-li">
+						<p>输入手机号<br>立即提交</p>
+						<div>
+							<input type="text" placeholder="姓名" id="quick_name"/>
+							<input type="text" placeholder="手机号码" id="quick_phone"/>
+							<button id="quick_submit">提交</button>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="icons1">
+				<img src="img/home/golden-ladies.png" alt="" />
+			</div>
+			<div class="more">
+				<a href="#">
+					<img src="img/home/more.png" alt=""/>
+				</a>
+			</div>
+			<div class="home-index-news">
+				<img src="img/home/new-t.png" alt="" class="index-news-t"/>
+				<div class="home-index-news-viewport">
+					<ul>
+					<li>
+						<a href="#">
+							<img src="img/home/b7f65ca269b9a1a3e750a93b1efcd3ec-33422_x_442_316.jpg" alt=""/>
+						</a>
+						<div class="news-i-title">
+							杭州金夫人发给客户的一封信-售后服务
+							<span class="short-line"></span>
+						</div>
+						<div class="news-i-msg">
+							杭州金夫人-杭州金夫人婚纱摄影【官方】后期服务及售后明细：杭州金夫人后期，杭州金夫人怎么样，义乌金夫人怎么样，湖州金夫人怎么样，杭. . .
+							<a href="#">MORE</a>
+						</div>
+
+					</li>
+					<li>
+						<a href="#">
+							<img src="img/home/33bdefc565b919c2cd8ef9107b58aef1-134818_x_442_316.jpg" alt=""/>
+						</a>
+						<div class="news-i-title">
+							2017杭州金夫人“以匠心 致初心” 专业中心大会
+							<span class="short-line"></span>
+						</div>
+						<div class="news-i-msg">
+							匠心是什么？
+							用四个字来形容，「爱觉不累」。
+							初心又是什么？
+							也用四个字来形容，就是「不忘本心」。
+							而我们专业部的家人们，
+							就是那. . .
+							<a href="#">MORE</a>
+						</div>
+					</li>
+					<li>
+						<a href="#">
+							<img src="img/home/5f5670b64b1d9ac02485ca26fc34d131-123721_x_442_316.jpg" alt=""/>
+						</a>
+						<div class="news-i-title">
+							金夫人特种兵｜坚持还是放弃，这是一个选择题
+							<span class="short-line"></span>
+						</div>
+						<div class="news-i-msg">
+							2017年8月22日，杭州金夫人赢在特种兵建立
+							每一位金家人在国旗面前庄重的喊出誓言
+							我，甘当杭州金夫人赢在特种兵
+							前进不止、奋. . .&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;
+							<a href="#">MORE</a>
+						</div>
+					</li>
+						<!--
+					<li>
+						<a href="#">
+							<img src="static/img/home/a2f4cc9a682e0290fc353aba16c1b034-117803_x_442_316.jpg" alt=""/>
+						</a>
+						<div class="news-i-title">
+							2017杭州金夫人“以匠心 致初心” 专业中心大会
+							<span class="short-line"></span>
+						</div>
+						<div class="news-i-msg">
+							匠心是什么？
+							用四个字来形容，「爱觉不累」。
+							初心又是什么？
+							也用四个字来形容，就是「不忘本心」。
+							而我们专业部的家人们，
+							就是那. . .
+							<a href="#">MORE</a>
+						</div>
+					</li>
+					<li>
+						<a href="#">
+							<img src="static/img/home/52644ca8947cb74c8134019838c95905-77156_x_442_316.jpg" alt=""/>
+						</a>
+						<div class="news-i-title">
+							2017杭州金夫人“以匠心 致初心” 专业中心大会
+							<span class="short-line"></span>
+						</div>
+						<div class="news-i-msg">
+							匠心是什么？
+							用四个字来形容，「爱觉不累」。
+							初心又是什么？
+							也用四个字来形容，就是「不忘本心」。
+							而我们专业部的家人们，
+							就是那. . .
+							<a href="#">MORE</a>
+						</div>
+					</li>
+					<li>
+						<a href="#">
+							<img src="static/img/home/ffcc2f18b8e38c6e72e86d0a5c4bc637-148073_x_442_316.jpg" alt=""/>
+						</a>
+						<div class="news-i-title">
+							2017杭州金夫人“以匠心 致初心” 专业中心大会
+							<span class="short-line"></span>
+						</div>
+						<div class="news-i-msg">
+							匠心是什么？
+							用四个字来形容，「爱觉不累」。
+							初心又是什么？
+							也用四个字来形容，就是「不忘本心」。
+							而我们专业部的家人们，
+							就是那. . .
+							<a href="#">MORE</a>
+						</div>
+					</li>
+					<li>
+						<a href="#">
+							<img src="static/img/home/b7f65ca269b9a1a3e750a93b1efcd3ec-33422_x_442_316.jpg" alt=""/>
+						</a>
+						<div class="news-i-title">
+							2017杭州金夫人“以匠心 致初心” 专业中心大会
+							<span class="short-line"></span>
+						</div>
+						<div class="news-i-msg">
+							匠心是什么？
+							用四个字来形容，「爱觉不累」。
+							初心又是什么？
+							也用四个字来形容，就是「不忘本心」。
+							而我们专业部的家人们，
+							就是那. . .
+							<a href="#">MORE</a>
+						</div>
+					</li>
+					<li>
+						<a href="#">
+							<img src="static/img/home/fc593ab804c879ef61ab463f043a45bb-269358_x_442_316.jpg" alt=""/>
+						</a>
+						<div class="news-i-title">
+							2017杭州金夫人“以匠心 致初心” 专业中心大会
+							<span class="short-line"></span>
+						</div>
+						<div class="news-i-msg">
+							匠心是什么？
+							用四个字来形容，「爱觉不累」。
+							初心又是什么？
+							也用四个字来形容，就是「不忘本心」。
+							而我们专业部的家人们，
+							就是那. . .
+							<a href="#">MORE</a>
+						</div>
+					</li>
+					<li>
+						<a href="#">
+							<img src="static/img/home/57d13f74b33c14a2d213d163053b02eb-98661_x_442_316.jpg" alt=""/>
+						</a>
+						<div class="news-i-title">
+							2017杭州金夫人“以匠心 致初心” 专业中心大会
+							<span class="short-line"></span>
+						</div>
+						<div class="news-i-msg">
+							匠心是什么？
+							用四个字来形容，「爱觉不累」。
+							初心又是什么？
+							也用四个字来形容，就是「不忘本心」。
+							而我们专业部的家人们，
+							就是那. . .
+							<a href="#">MORE</a>
+						</div>
+					</li>
+					-->
+				</ul>
+				</div>
+			</div>
+		</div>
+		<footer id="layout-footer"></footer>
+		<script src="javascript/jquery-3.2.1.js"></script>
+		<script>
+			var video1=document.getElementById("360videoname");
+			var buttonbig=document.getElementById('buttonbig');
+			console.log($(video1))
+			$(buttonbig).click(function(){
+					$(video1).attr('src',$(this).attr('video'));
+					//$(buttonbig).css('z-index',-1);
+					$(video1).removeClass('video-none')
+					$(video1).addClass('video-show')
+					video1.className='video-show active';
+					video1.play();				
+			})
+
+			$(video1).click(function(){
+				if($(video1).hasClass('active')){
+					//$(buttonbig).css('z-index',20);
+					$(video1).removeClass('active');
+					video1.pause();		
+				}else{
+					$(video1).addClass('active')
+					video1.play();
+				}
+			})
+
+			/*
+			buttonbig.onclick=function(){
+				video1.className='video-show';
+				video1.play();
+			}*/
+		</script>
+		<script>
+			$('.video-control').on('click','ul>li',function(){
+				console.log(1);
+				var video1=document.getElementById("360videoname");
+				//console.log()
+				$(video1).attr('src',$(this).attr('video'));
+				video1.play();
+			})
+		</script>
+		<script type="text/javascript" src="javascript/ajax.js"></script>
+		<script type="text/javascript" src="javascript/index.js"></script>
+		<script src="javascript/header.js"></script>	
+		<script src="javascript/footer.js"></script>	
+		<script>
+			$('.home-week>ul').on('mouseover','li>div',function(){
+				$(this).children('.point:first-child').addClass('line1')
+				.next().addClass('line2')
+				.next().addClass('line3')
+				.next().addClass('line4')
+				.next().addClass('modal2')
+				.next().addClass('imgBig');
+			})
+			$('.home-week>ul').on('mouseout','li>div',function(){
+				$(this).children('.point:first-child').removeClass('line1')
+				.next().removeClass('line2')
+				.next().removeClass('line3')
+				.next().removeClass('line4')
+				.next().removeClass('modal2')
+				.next().removeClass('imgBig');
+			})
+		</script>
+	</body>
