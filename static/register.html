@@ -70,7 +70,7 @@
                     uanmeC=false;
                 }else{
                     $.ajax({
-                        url:'http://127.0.0.1:3000/register/uname',
+                        url:'http://www.qiaxiaojiu:5000/register/uname',
                         type:'post',
                         data:{uname:$('#uname').val()},
                         success:function(res){
@@ -138,7 +138,7 @@
                     phoneC=false;
                 }else{
                     $.ajax({
-                        url:'http://127.0.0.1:3000/register/phone',
+                        url:'http://www.qiaxiaojiu:5000/register/phone',
                         type:'post',
                         data:{phone:$('#phone').val()},
                         success:function(res){
@@ -177,7 +177,7 @@
                 $('button').click(function () {
                     if (uanmeC == true && upwdC == true && cpwdC == true && phoneC == true && emailC == true) {
                         $.ajax({
-                            url: 'http://127.0.0.1:3000/register',
+                            url: 'http://www.qiaxiaojiu:5000/register',
                             type: 'post',
                             data: {
                                 uname: $('#uname').val(),

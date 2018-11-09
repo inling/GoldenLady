@@ -1,6 +1,6 @@
 window.onload=function(){
     $.ajax({
-        url:'http://127.0.0.1:3000/header',
+        url:'http://www.qiaxiaojiu:5000/header',
         type:'get',
         dataType:'json',
         success:function(res){
@@ -8,7 +8,7 @@ window.onload=function(){
             for( var re of res){
                 var {hdid,hdSmallImg}=re;
                 html+= `<li>
-                    <a href="http://127.0.0.1:3000/homeBase.html?hdid=${hdid}">
+                    <a href="http://www.qiaxiaojiu:5000/homeBase.html?hdid=${hdid}">
                         <img src="${hdSmallImg}" alt="" target-toggle="${hdid}">
                     </a>
                 </li>`
