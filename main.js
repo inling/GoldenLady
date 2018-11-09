@@ -6,7 +6,7 @@ const header=require('./routes/header.js');
 const login=require('./routes/login.js');
 const register=require('./routes/register.js')
 var app=express();
-app.listen(3000,()=>{
+app.listen(5000,()=>{
     console.log('server start success');
 });
 app.use(bodyParser.urlencoded({
