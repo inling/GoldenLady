@@ -1,6 +1,7 @@
+/*
 window.onload=function(){
     $.ajax({
-        url:'http://www.qiaxiaojiu:5000/header',
+        url:'http://www.qiaxiaojiu.com:5000/header',
         type:'get',
         dataType:'json',
         success:function(res){
@@ -8,7 +9,7 @@ window.onload=function(){
             for( var re of res){
                 var {hdid,hdSmallImg}=re;
                 html+= `<li>
-                    <a href="http://www.qiaxiaojiu:5000/homeBase.html?hdid=${hdid}">
+                    <a href="http://www.qiaxiaojiu.com:5000/homeBase.html?hdid=${hdid}">
                         <img src="${hdSmallImg}" alt="" target-toggle="${hdid}">
                     </a>
                 </li>`
@@ -18,7 +19,7 @@ window.onload=function(){
         }
     })
 }
-
+*/
 
 $(function(){
     $('<link rel="stylesheet" href="css/header.css">').appendTo('head');

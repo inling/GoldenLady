@@ -1,7 +1,7 @@
 (async function(){
     var hdid=location.search.split('=')[1];
     var res=await $.ajax({
-        url:`http://www.qiaxiaojiu:5000/homeBase/`,
+        url:`http://www.qiaxiaojiu.com:5000/homeBase/`,
         type:'get',
         dataType:'json',
         data:{'hdid':hdid}

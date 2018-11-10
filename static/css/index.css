@@ -13,6 +13,8 @@ a {
   text-decoration: none; }
 
 #home {
+  width: 1440px;
+  margin: 0 auto;
   margin-top: 50px; }
   #home .home-slider-map {
     /* width:1920px;

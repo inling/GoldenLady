@@ -1,71 +1,60 @@
-#layout-footer .footer-map {
-  float: left;
-  max-width: 990px;
-  width: 60%;
-  height: 750px;
-  border-right: 1px solid #B4B3B1;
-  padding-right: 50px; }
-  #layout-footer .footer-map img {
-    width: 100%; }
-
-#layout-footer .footer-storeInfo {
-  float: left;
-  width: 40%;
-  padding-left: 50px; }
-
-#layout-footer .desc-a {
-  font-size: 50px;
-  margin: 40px 0 20px;
-  color: white; }
-
-#layout-footer .desc-b {
-  font-size: 35px;
-  margin-bottom: 40px;
-  color: #B4B3B1; }
-
-#layout-footer .desc-wb img {
-  margin: 20px 20px 20px 0; }
-
-#layout-footer .footer-stores-a, #layout-footer .footer-stores-b {
-  font-size: 14px;
-  color: white; }
-
-#layout-footer .footer-stores-a span {
-  color: #E6C985; }
-
-#layout-footer .footer-stores-b span {
-  color: #E6C985; }
-
-#layout-footer .footer-stores-b p {
-  padding: 1px; }
-
-#layout-footer .footer-stores-a {
-  margin: 40px 0 20px;
-  color: white; }
-
-#layout-footer .footer-tel {
-  margin: 20px 40px 20px;
-  color: white; }
-
-#layout-footer .copyright {
-  clear: left;
-  text-align: center;
-  font-size: 14px;
-  color: #999;
-  padding: 60px 0 100px; }
-
-#layout-footer .copyright a {
-  color: #999; }
-
-#layout-footer .home-park-34 {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 50px 100px;
-  background: #EFEFEF; }
-
-#layout-footer .home-park-35 {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 50px 100px 150px; }
+#layout-footer {
+  width: 1440px;
+  margin: 0 auto; }
+  #layout-footer .footer-map {
+    float: left;
+    max-width: 990px;
+    width: 60%;
+    height: 750px;
+    border-right: 1px solid #B4B3B1;
+    padding-right: 50px; }
+    #layout-footer .footer-map img {
+      width: 100%; }
+  #layout-footer .footer-storeInfo {
+    float: left;
+    width: 40%;
+    padding-left: 50px; }
+  #layout-footer .desc-a {
+    font-size: 50px;
+    margin: 40px 0 20px;
+    color: white; }
+  #layout-footer .desc-b {
+    font-size: 35px;
+    margin-bottom: 40px;
+    color: #B4B3B1; }
+  #layout-footer .desc-wb img {
+    margin: 20px 20px 20px 0; }
+  #layout-footer .footer-stores-a, #layout-footer .footer-stores-b {
+    font-size: 14px;
+    color: white; }
+  #layout-footer .footer-stores-a span {
+    color: #E6C985; }
+  #layout-footer .footer-stores-b span {
+    color: #E6C985; }
+  #layout-footer .footer-stores-b p {
+    padding: 1px; }
+  #layout-footer .footer-stores-a {
+    margin: 40px 0 20px;
+    color: white; }
+  #layout-footer .footer-tel {
+    margin: 20px 40px 20px;
+    color: white; }
+  #layout-footer .copyright {
+    clear: left;
+    text-align: center;
+    font-size: 14px;
+    color: #999;
+    padding: 60px 0 100px; }
+  #layout-footer .copyright a {
+    color: #999; }
+  #layout-footer .home-park-34 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 50px 100px;
+    background: #EFEFEF; }
+  #layout-footer .home-park-35 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 50px 100px 150px; }

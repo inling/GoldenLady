@@ -1,7 +1,7 @@
 (async function(){
     var res= await ajax({
         type:'get',
-        url:'http://www.qiaxiaojiu:5000/index',
+        url:'http://www.qiaxiaojiu.com:5000/index',
         datatype:'json'
     });
 
